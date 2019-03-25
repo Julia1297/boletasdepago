@@ -5,5 +5,6 @@ class PaymentBill{
     calculatePayment(){
         return this.employee.getSalary();
     }
+    
 }
 module.exports=PaymentBill;
