@@ -54,4 +54,12 @@ describe('boletas de pago',function(){
         let empleado = new Empleado("Erick",1,calculadora);
         expect(empleado.obtenerSalario()).equal(225);
     });
+    it('generar la tarjeta de horas para un empleado por horas ',function(){
+        let tarjetaDeHoras  = new TarjetaHoras("2018-03-22","16:00:00","20:00:00");
+        let resultado = tarjetaDeHoras.obtenerCantidadDeHorasTrabajadas();
+        let esperado = 4;
+        expect(resultado).equal(esperado);
+    });
+
+
 });
