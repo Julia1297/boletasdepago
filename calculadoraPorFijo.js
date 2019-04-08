@@ -1,7 +1,7 @@
 import Calculadora from './calculadora';
-class CalculadoraPorFijo extends Calculadora{
+class CalculadoraPorFijo {
     constructor(salario){
-        super();
+
         this.salario=salario;
     }
     calcularSalario(){

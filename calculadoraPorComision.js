@@ -1,7 +1,6 @@
 import Calculadora from './calculadora';
-class CalculadoraPorComision extends Calculadora{
+class CalculadoraPorComision {
     constructor(salarioBase,porcentajeComision,tarjetaVentas){
-        super();
         this.salarioBase=salarioBase;
         this.porcentajeComision=porcentajeComision;
         this.tarjetaVentas=tarjetaVentas;
