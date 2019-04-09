@@ -7,6 +7,7 @@ import CalculadoraPorComision from '../calculadoraPorComision';
 import TarjetaHoras from '../tarjetaHoras';
 import TarjetaVentas from '../tarjetasVentas';
 import ComprobanteDeFechaDePagoPorHora from '../ComprobanteDeFechaDePagoPorHora';
+import ComprobanteDeFechaDePagoPorComision from '../ComprobanteDeFechaDePagoPorComision';
 
 describe('boletas de pago',function(){
     it('calcular cantidad de horas de una Tarjeta de horas',function(){
@@ -98,6 +99,22 @@ describe('boletas de pago',function(){
         expect(month).equal(monthEsperado);
         expect(year).equal(2019);
 
+    });
+
+    it('recibe una fecha y devuelve la fecha de Pago para Comision',function(){
+
+        let fechaIncioLaboral = new Date(2019,3,8);
+        let  comprabanteDeFechaHora = new ComprobanteDeFechaDePagoPorComision(fechaIncioLaboral);
+        let fechaResultante = comprabanteDeFechaHora.obtenerFechaDePago();
+        
+        let day  = fechaResultante.getDate();
+        let month = fechaResultante.getMonth();
+        let year = fechaResultante.getFullYear();
+
+        expect(year).equal(2019);
+        expect(month).equal(3);
+        expect(day).equal(19);
+        
     });
 
 
