@@ -1,9 +1,9 @@
-class ComprobanteDeFechaDePagoFijo{
+class CalculadoraDeFechaDePagoFijo{
 
     constructor(fechaDeInicioLaboral){
         this.fechaDeInicioLaboral = fechaDeInicioLaboral;
     }
-    obtenerFechaDePago(){
+    calcularFechaDePago(){
         let fechaDePago=this.obtenerUltimoDiaDelMes();
         if(this.esDomingo(fechaDePago) || this.esSabado(fechaDePago)){
             this.obtenerDiaHabil(fechaDePago);
@@ -28,4 +28,4 @@ class ComprobanteDeFechaDePagoFijo{
         return fechaDePago.getDay()==6;
     }
 }
-module.exports=ComprobanteDeFechaDePagoFijo;
+module.exports=CalculadoraDeFechaDePagoFijo;
