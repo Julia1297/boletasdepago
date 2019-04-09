@@ -1,9 +1,9 @@
-class ComprobanteDeFechaDePagoPorHora{
+class CalculadoraDeFechaDePagoPorHora{
 
     constructor(fechaDeInicioLaboral){
         this.fechaDeInicioLaboral = fechaDeInicioLaboral;
     }
-    obtenerFechaDePago(){
+    calcularFechaDePago(){
         let fechaDePago=this.fechaDeInicioLaboral;
 
         while(fechaDePago.getDay()!= 5){
@@ -18,4 +18,4 @@ class ComprobanteDeFechaDePagoPorHora{
 
 }
 
-module.exports=ComprobanteDeFechaDePagoPorHora;
+module.exports=CalculadoraDeFechaDePagoPorHora;
