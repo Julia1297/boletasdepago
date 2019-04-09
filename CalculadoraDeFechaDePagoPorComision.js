@@ -1,8 +1,8 @@
-class ComprobanteDeFechaDePagoPorComision {
+class CalculadoraDeFechaDePagoPorComision {
     constructor(fechaDeInicioLaboral) {
         this.fechaDeInicioLaboral = fechaDeInicioLaboral;
     }
-    obtenerFechaDePago() {
+    calcularFechaDePago() {
         let fechaDePago = this.fechaDeInicioLaboral;
         fechaDePago.setDate(fechaDePago.getDate() +  this.obtenerDiasRestanteParaViernes() + 7);
         return fechaDePago;
@@ -13,4 +13,4 @@ class ComprobanteDeFechaDePagoPorComision {
     }
 }
 
-module.exports = ComprobanteDeFechaDePagoPorComision;
+module.exports = CalculadoraDeFechaDePagoPorComision;
