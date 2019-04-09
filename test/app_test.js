@@ -7,6 +7,7 @@ import CalculadoraPorComision from '../calculadoraPorComision';
 import TarjetaHoras from '../tarjetaHoras';
 import TarjetaVentas from '../tarjetasVentas';
 import ComprobanteDeFechaDePagoPorHora from '../ComprobanteDeFechaDePagoPorHora';
+import ComprobanteDeFechaDePagoFijo from '../ComprobanteDeFechaDePagoFijo';
 
 describe('boletas de pago',function(){
     it('calcular cantidad de horas de una Tarjeta de horas',function(){
@@ -36,26 +37,23 @@ describe('boletas de pago',function(){
         expect(calculadora.calcularSalario()).equal(250);
     });
 
-    it('generar la boleta de pago para un empleado fijo',function(){
+    it('obtener salario para un empleado fijo que gana 1800',function(){
         let calculadora = new CalculadoraPorFijo(1800);
         let empleado = new Empleado("Erick",1,calculadora); 
         expect(empleado.obtenerSalario()).equal(1800);
     });
 
-    it('generar la boleta de pago para un empleado por hora',function(){
+    it('obtener el salario para un empleado por hora de 200',function(){
         let tarjetaHoras = new TarjetaHoras("2018-03-22","16:00:00","20:00:00");
         let calculadora = new CalculadoraPorHora(200,[tarjetaHoras]);
         let empleado = new Empleado("Erick",1,calculadora);
         expect(empleado.obtenerSalario()).equal(800);
     });
 
-    it('generar la boleta de pago para un empleado por comision con 5% de comision',function(){
+    it('obtener salario para un empleado por comision de 5%',function(){
         let tarjetaVentas = new TarjetaVentas(500,"2018-03-22");
         let calculadora = new CalculadoraPorComision(200,0.05,tarjetaVentas);
         let empleado = new Empleado("Erick",1,calculadora);
-
-
-
         expect(empleado.obtenerSalario()).equal(225);
     });
     it('generar la tarjeta de horas para un empleado por horas ',function(){
@@ -65,7 +63,7 @@ describe('boletas de pago',function(){
         expect(resultado).equal(esperado);
     });
 
-    it('generar la boleta de pago para un empleado  para 3 tarjetas de horas',function(){
+    it('obtener salario para un empleado con 3 tarjetas de horas',function(){
         let tarjetaHoras = new TarjetaHoras("2018-03-22","16:00:00","20:00:00");
         let tarjetaHoras1 = new TarjetaHoras("2018-03-23","16:00:00","20:00:00");
         let tarjetaHoras2 = new TarjetaHoras("2018-03-24","16:00:00","20:00:00");
@@ -80,26 +78,45 @@ describe('boletas de pago',function(){
 
     //test para calcular fecha del proximo viernes
 
-    it('recibe una fecha y devuelve la fecha del siguiente viernes',function(){
+    it('recibe una fecha y devuelve la fecha del viernes para pagar a un empleado por hora',function(){
 
         let fechaIncioLaboral = new Date(2019,3,8);
         let  comprabanteDeFechaHora = new ComprobanteDeFechaDePagoPorHora(fechaIncioLaboral);
         let fechaResultante = comprabanteDeFechaHora.obtenerFechaDePago();
         let fechaEsperada = new Date(2019,3,12);
-        let day  = fechaResultante.getDay();
-        let month = fechaResultante.getMonth();
-        let year = fechaResultante.getFullYear();
+        let dia  = fechaResultante.getDay();
+        let mes = fechaResultante.getMonth();
+        let anio = fechaResultante.getFullYear();
 
-        let dayEsperado = fechaEsperada.getDay();
-        let monthEsperado = fechaEsperada.getMonth();
-        let yearEsperado = fechaEsperada.getFullYear();
+        let diaEsperado = fechaEsperada.getDay();
+        let mesEsperado = fechaEsperada.getMonth();
+        let anioEsperado = fechaEsperada.getFullYear();
 
-        expect(day).equal(dayEsperado);
-        expect(month).equal(monthEsperado);
-        expect(year).equal(2019);
+        expect(dia).equal(diaEsperado);
+        expect(mes).equal(mesEsperado);
+        expect(anio).equal(anioEsperado);
 
     });
+   
+    it('recibe una fecha y devuelve la fecha del ultimo dia habil del mes para un empleado fijo',function(){
 
+        let fechaIncioLaboral = new Date(2019,5,3);
+        let  comprabanteDeFechaFijo = new ComprobanteDeFechaDePagoFijo(fechaIncioLaboral);
+        let fechaResultante = comprabanteDeFechaFijo.obtenerFechaDePago();
+        let fechaEsperada = new Date(2019,5,28);
+        let dia  = fechaResultante.getDate();
+        let mes = fechaResultante.getMonth();
+        let anio = fechaResultante.getFullYear();
+
+        let diaEsperado = fechaEsperada.getDate();
+        let mesEsperado = fechaEsperada.getMonth();
+        let anioEsperado = fechaEsperada.getFullYear();
+
+        expect(dia).equal(diaEsperado);
+        expect(mes).equal(mesEsperado);
+        expect(anio).equal(anioEsperado);
+
+    });
 
 
 });
