@@ -12,6 +12,7 @@ import CalculadoraDeFechaDePagoPorComision from '../CalculadoraDeFechaDePagoPorC
 import BoletaDePago from '../boletaDePago';
 import GeneradorBoletasDePago from '../generadorBoletasPago';
 let empleados = [];
+
 describe('boletas de pago', function () {
     it('calcular cantidad de horas de una Tarjeta de horas', function () {
         let tarjetaHoras = new TarjetaHoras("2018-03-22", "08:00:00", "12:00:00");

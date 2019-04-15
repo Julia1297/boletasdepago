@@ -17,6 +17,7 @@
     "mocha": "^5.2.0"
   },
   "dependencies": {
-    "chai": "^4.2.0"
+    "chai": "^4.2.0",
+    "sqlite3": "^4.0.6"
   }
 }
