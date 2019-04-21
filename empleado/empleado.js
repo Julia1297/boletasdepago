@@ -1,15 +1,15 @@
 class Empleado{
-    constructor(nombre,ci,calculadora,fechaPago){
+    constructor(nombre,ci,calculadora,calculadoraFechaPago){
         this.nombre=nombre;
         this.ci=ci;
         this.calculadora=calculadora;
-        this.fechaPago=fechaPago;
+        this.calculadoraFechaPago=calculadoraFechaPago;
     }
     obtenerSalario(){
         return this.calculadora.calcularSalario();
     }
     obtenerFechaPago(){
-        return this.fechaPago.calcularFechaDePago();
+        return this.calculadoraFechaPago.calcularFechaDePago();
     }
     obtenerNombre(){
         return this.nombre;
