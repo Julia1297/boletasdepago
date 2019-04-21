@@ -3,7 +3,7 @@ import CalculadoraDeFechaDePagoPorHora from '../calculadoraFechaDePago/calculado
 import CalculadoraDeFechaDePagoFijo from '../calculadoraFechaDePago/calculadoraDeFechaDePagoFijo';
 import CalculadoraDeFechaDePagoPorComision from '../calculadoraFechaDePago/CalculadoraDeFechaDePagoPorComision';
 
-describe('Tests para calcular fechas de pago', function () {
+describe('CalculadoraFechaDePago', function () {
 it('recibe una fecha y devuelve la fecha del viernes para pagar a un empleado por hora', function () {
 
     let fechaIncioLaboral = new Date(2019, 3, 8);

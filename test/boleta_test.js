@@ -12,7 +12,7 @@ import CalculadoraDeFechaDePagoPorComision from '../calculadoraFechaDePago/Calcu
 import BoletaDePago from '../boleta/boletaDePago';
 
 
-describe('',function(){
+describe('boletas de pago',function(){
     it('recibe un empleado fijo y genera su boleta de pago', function () {
         let fechaActual = new Date(2019, 3, 5);
         let calculadora = new CalculadoraPorFijo(1800);
