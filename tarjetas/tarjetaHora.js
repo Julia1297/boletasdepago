@@ -1,4 +1,4 @@
-class TarjetaHoras{
+class TarjetaHora{
     constructor(fecha,horaEntrada,horaSalida){
         this.fecha=fecha;
         this.horaEntrada=horaEntrada;
@@ -11,4 +11,4 @@ class TarjetaHoras{
     }
 }
 
-module.exports=TarjetaHoras;
+module.exports=TarjetaHora;

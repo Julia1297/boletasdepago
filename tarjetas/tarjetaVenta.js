@@ -1,4 +1,4 @@
-class TarjetaVentas{
+class TarjetaVenta{
     constructor(montoVendido,fecha){
         this.montoVendido=montoVendido;
         this.fecha=fecha;
@@ -7,4 +7,4 @@ class TarjetaVentas{
         return this.montoVendido;
     }
 }
-module.exports=TarjetaVentas;
+module.exports=TarjetaVenta;
