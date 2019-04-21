@@ -1,4 +1,4 @@
-import Calculadora from './calculadora';
+
 class CalculadoraPorComision {
     constructor(salarioBase, porcentajeComision, tarjetaVentas) {
         this.salarioBase = salarioBase;

@@ -1,4 +1,3 @@
-import Calculadora from './calculadora';
 class CalculadoraPorHora {
     constructor(montoPorHora,tarjetaHoras){
 

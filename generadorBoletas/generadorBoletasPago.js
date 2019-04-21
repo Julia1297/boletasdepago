@@ -1,4 +1,4 @@
-import BoletaDePago from './boletaDePago';
+import BoletaDePago from '../boleta/boletaDePago';
 class GeneradorBoletasDePago{
     constructor(empleados,fechaActual){
         this.empleados=empleados;

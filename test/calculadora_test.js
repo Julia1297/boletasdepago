@@ -1,10 +1,10 @@
 var expect = require('chai').expect
 
-import CalculadoraPorFijo from '../calculadora/calculadoraPorFijo';
-import CalculadoraPorHora from '../calculadora/calculadoraPorHora';
-import CalculadoraPorComision from '../calculadora/calculadoraPorComision';
-import TarjetaHoras from '../tarjetaHoras';
-import TarjetaVentas from '../tarjetasVentas';
+import CalculadoraPorFijo from '../calculadoraSalario/calculadoraPorFijo';
+import CalculadoraPorHora from '../calculadoraSalario/calculadoraPorHora';
+import CalculadoraPorComision from '../calculadoraSalario/calculadoraPorComision';
+import TarjetaHoras from '../tarjetas/tarjetaHoras';
+import TarjetaVentas from '../tarjetas/tarjetasVentas';
 
 describe('Test de Calculadora para los pagos', function () {
     it('generar la tarjeta de horas para un empleado por horas ', function () {

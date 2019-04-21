@@ -1,18 +1,24 @@
 var expect = require('chai').expect
 
-import Empleado from '../empleado';
-import CalculadoraPorFijo from '../calculadora/calculadoraPorFijo';
-import CalculadoraPorHora from '../calculadora/calculadoraPorHora';
-import CalculadoraPorComision from '../calculadora/calculadoraPorComision';
-import TarjetaHoras from '../tarjetaHoras';
-import TarjetaVentas from '../tarjetasVentas';
+import Empleado from '../empleado/empleado.js';
+import CalculadoraPorFijo from '../calculadoraSalario/calculadoraPorFijo';
+import CalculadoraPorHora from '../calculadoraSalario/calculadoraPorHora';
+import CalculadoraPorComision from '../calculadoraSalario/calculadoraPorComision';
+import TarjetaHoras from '../tarjetas/tarjetaHoras';
+import TarjetaVentas from '../tarjetas/tarjetasVentas';
 import CalculadoraDeFechaDePagoPorHora from '../calculadoraFechaDePago/calculadoraDeFechaDePagoPorHora';
 import CalculadoraDeFechaDePagoFijo from '../calculadoraFechaDePago/calculadoraDeFechaDePagoFijo';
 import CalculadoraDeFechaDePagoPorComision from '../calculadoraFechaDePago/CalculadoraDeFechaDePagoPorComision';
-import BoletaDePago from '../boletaDePago';
-import GeneradorBoletasDePago from '../generadorBoletasPago';
+import BoletaDePago from '../boleta/boletaDePago';
+import GeneradorBoletasDePago from '../generadorBoletas/generadorBoletasPago';
 let empleados = [];
+// const mongoose = require('mongoose');
 
+// //connect to db-------------------------------------------------------------
+// mongoose.connect('mongodb://localhost/BoletasBd', { useNewUrlParser: true })
+//     .then(db => console.log("DB conectada"))
+//     .catch(err => console.log(err));
+// //--------------------------------------------------------------------------
 describe('boletas de pago para empleados', function () {
     
     it('obtener salario para un empleado fijo que gana 1800', function () {
@@ -22,7 +28,6 @@ describe('boletas de pago para empleados', function () {
         let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha);
         expect(empleado.obtenerSalario()).equal(1800);
     });
-
     it('obtener el salario para un empleado por hora de 200', function () {
         let tarjetaHoras = new TarjetaHoras("2018-03-22", "16:00:00", "20:00:00");
         let calculadora = new CalculadoraPorHora(200, [tarjetaHoras]);
