@@ -20,7 +20,7 @@ describe('boleta de pago',function(){
 
         let fechaIncioLaboral = new Date(2019, 3, 2);
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoFijo(fechaIncioLaboral);
-        let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha);
+        let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha,"Deposito");
         let boletaPago = new BoletaDePago();
         let fechaDePago = new Date(2019,3,30);
         fechaDePago.toString();
@@ -31,7 +31,7 @@ describe('boleta de pago',function(){
                             Tipo de moneda: Bs
                             Metodo de pago: Deposito
                             Fecha de pago: ${fechaDePago}`;
-        let boletaResultante=boletaPago.generarBoleta(empleado, "Deposito");
+        let boletaResultante=boletaPago.generarBoleta(empleado);
         expect(boletaEsperada).equal(boletaResultante);
     });
 
@@ -42,7 +42,7 @@ describe('boleta de pago',function(){
         expect(calculadora.calcularSalario()).equal(800);
         let fechaIncioLaboral = new Date(2019, 3, 2);
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoPorHora(fechaIncioLaboral);
-        let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha);
+        let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha,"Efectivo");
         let boletaPago = new BoletaDePago();
         let fechaDePago = new Date(2019,3,5);
         fechaDePago.toString();
@@ -53,7 +53,7 @@ describe('boleta de pago',function(){
                             Tipo de moneda: Bs
                             Metodo de pago: Efectivo
                             Fecha de pago: ${fechaDePago}`;
-        let boletaResultante=boletaPago.generarBoleta(empleado, "Efectivo");
+        let boletaResultante=boletaPago.generarBoleta(empleado);
         expect(boletaEsperada).equal(boletaResultante);
     });
 
@@ -63,7 +63,7 @@ describe('boleta de pago',function(){
 
         let fechaIncioLaboral = new Date(2019, 3, 2);
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoPorComision(fechaIncioLaboral);
-        let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha);
+        let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha,"Cheque");
         let boletaPago = new BoletaDePago();
         let fechaDePago = new Date(2019,3,12);
         fechaDePago.toString();
@@ -74,7 +74,7 @@ describe('boleta de pago',function(){
                             Tipo de moneda: Bs
                             Metodo de pago: Cheque
                             Fecha de pago: ${fechaDePago}`;
-        let boletaResultante=boletaPago.generarBoleta(empleado, "Cheque");
+        let boletaResultante=boletaPago.generarBoleta(empleado);
         expect(boletaEsperada).equal(boletaResultante);
     });
 });

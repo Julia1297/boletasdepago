@@ -8,7 +8,8 @@ class GeneradorBoletasDePago{
    
     generarBoletasDePagoParaTodosLosEmpleados(){
         for (let empleado of this.empleados) {
-            let boletaDePago = new BoletaDePago(empleado,this.fechaActual);
+            let boletaDePago = new BoletaDePago();
+            boletaDePago.generarBoleta(empleado,);
             this.boletasGeneradas.push(boletaDePago);
         }
     }
