@@ -13,7 +13,7 @@ import CalculadoraDeFechaDePagoPorComision from '../calculadoraFechaDePago/Calcu
 
 describe('calcular el salario para empleados y su fecha de paga', function () {
     
-    it('obtener salario para un empleado fijo que gana 1800', function () {
+    it('obtener salario para un empleado fijo que gana 1800 y que asistio un dia laboral', function () {
         let tarjetaAsistencia = new TarjetaAsistencia("2018-03-22");
         let calculadora = new CalculadoraPorFijo(1800,[tarjetaAsistencia]);;
         let empleado = new Empleado("Erick", 1, calculadora);

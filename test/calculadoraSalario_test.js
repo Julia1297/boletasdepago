@@ -6,7 +6,7 @@ import CalculadoraPorComision from '../calculadoraSalario/calculadoraPorComision
 import TarjetaHora from '../tarjetas/tarjetaHora';
 import TarjetaAsistencia from '../tarjetas/tarjetaAsistencia';
 import TarjetaVenta from '../tarjetas/tarjetaVenta';
-
+let DiasTrabajados=[];
 describe('Calculadora de salario', function () {
 
     it('calcular salario para un empleado fijo que asistio un dia laboral del mes', function () {
@@ -14,6 +14,27 @@ describe('Calculadora de salario', function () {
         let calculadora = new CalculadoraPorFijo(1800,[tarjetaAsistencia]);
         expect(calculadora.calcularSalario()).equal(81);
     });
+
+    it('calcular salario para un empleado fijo que asistio 10 dias laborales del mes', function () {
+        DiezDiasTrabajados();
+        let calculadora = new CalculadoraPorFijo(1800,DiasTrabajados);
+        expect(calculadora.calcularSalario()).equal(818);
+    });
+    function DiezDiasTrabajados(){
+        let tarjetaAsistencia1 = new TarjetaAsistencia("2018-03-2");
+        let tarjetaAsistencia2 = new TarjetaAsistencia("2018-03-3");
+        let tarjetaAsistencia3 = new TarjetaAsistencia("2018-03-5");
+        let tarjetaAsistencia4 = new TarjetaAsistencia("2018-03-8");
+        let tarjetaAsistencia5 = new TarjetaAsistencia("2018-03-12");
+        let tarjetaAsistencia6 = new TarjetaAsistencia("2018-03-15");
+        let tarjetaAsistencia7 = new TarjetaAsistencia("2018-03-16");
+        let tarjetaAsistencia8 = new TarjetaAsistencia("2018-03-17");
+        let tarjetaAsistencia9 = new TarjetaAsistencia("2018-03-18");
+        let tarjetaAsistencia10 = new TarjetaAsistencia("2018-03-19");
+        DiasTrabajados=[tarjetaAsistencia1,tarjetaAsistencia2,tarjetaAsistencia3,tarjetaAsistencia4,
+                        tarjetaAsistencia5,tarjetaAsistencia6,tarjetaAsistencia7,tarjetaAsistencia8,
+                        tarjetaAsistencia9,tarjetaAsistencia10];
+    }
 
     it('calcular el salario para un empleado por hora con 1 tarjeta de hora', function () {
         let tarjetaHora1 = new TarjetaHora("2018-03-22", "08:00:00", "12:00:00");
