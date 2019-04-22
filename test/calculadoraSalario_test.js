@@ -44,10 +44,10 @@ describe('Calculadora de salario', function () {
 
     it('calcular el salario para un empleado por hora con mas de 1 tarjeta de hora', function () {
         let tarjetaHora1 = new TarjetaHora("2018-03-22", "08:00:00", "12:00:00");
-        let tarjetaHora2 = new TarjetaHora("2018-03-22", "15:00:00", "18:00:00");
-        let tarjetaHora3 = new TarjetaHora("2018-03-23", "15:00:00", "19:00:00");
+        let tarjetaHora2 = new TarjetaHora("2018-03-23", "08:00:00", "18:00:00");
+        let tarjetaHora3 = new TarjetaHora("2018-03-24", "07:00:00", "19:00:00");
         let calculadora = new CalculadoraPorHora(200, [tarjetaHora1, tarjetaHora2, tarjetaHora3]);
-        expect(calculadora.calcularSalario()).equal(2200);
+        expect(calculadora.calcularSalario()).equal(5800);
     });
     
     it('calcular el salario para un empleado por comision con 10% de comision y 1 tarjeta de venta', function () {
