@@ -16,7 +16,9 @@ describe('calcular el salario para empleados y su fecha de paga', function () {
     it('obtener salario para un empleado fijo que gana 1800 y que asistio un dia laboral', function () {
         let tarjetaAsistencia = new TarjetaAsistencia("2019-03-22");
         let calculadora = new CalculadoraPorFijo(1800,[tarjetaAsistencia]);;
-        let empleado = new Empleado("Erick", 1, calculadora,"Deposito");
+        let fechaIncioLaboral = new Date(2019, 3, 22);
+        let calculadoraDeFecha = new CalculadoraDeFechaDePagoFijo(fechaIncioLaboral);
+        let empleado = new Empleado("Erick", 1, calculadora,calculadoraDeFecha,"Deposito");
         expect(empleado.obtenerSalario()).equal(81);
     });
 
@@ -46,7 +48,7 @@ describe('calcular el salario para empleados y su fecha de paga', function () {
         let calculadora = new CalculadoraPorHora(200, [tarjetaHora]);
         let fechaIncioLaboral = new Date(2019, 5, 3);
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoPorHora(fechaIncioLaboral);
-        let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha);
+        let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha,"Deposito");
         let fechaResultante = empleado.obtenerFechaPago().toString();
         let fechaEsperada = new Date(2019, 5, 7).toString();
         expect(fechaEsperada).equal(fechaResultante);
@@ -96,7 +98,7 @@ describe('calcular el salario para empleados y su fecha de paga', function () {
         let calculadora = new CalculadoraPorComision(1000, 0.10, [tarjetaVenta1]);
         let fechaIncioLaboral = new Date(2019, 5, 3);
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoPorComision(fechaIncioLaboral);
-        let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha);
+        let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha,"Efectivo");
         let fechaResultante = empleado.obtenerFechaPago().toString();
         let fechaEsperada = new Date(2019, 5, 14).toString();
         expect(fechaEsperada).equal(fechaResultante);

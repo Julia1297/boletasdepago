@@ -15,7 +15,7 @@ import BoletaDePago from '../boleta/boletaDePago';
 
 describe('boleta de pago',function(){
     it('recibe un empleado fijo y genera su boleta de pago', function () {
-        let tarjetaAsistencia = new TarjetaAsistencia("2018-03-02");
+        let tarjetaAsistencia = new TarjetaAsistencia("2019-03-02");
         let calculadora = new CalculadoraPorFijo(1800,[tarjetaAsistencia]);
 
         let fechaIncioLaboral = new Date(2019, 3, 2);
