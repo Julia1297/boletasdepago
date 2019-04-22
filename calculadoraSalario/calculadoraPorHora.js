@@ -1,8 +1,8 @@
 class CalculadoraPorHora {
-    constructor(montoPorHora,tarjetaHoras){
+    constructor(montoPorHora,listaTarjetasHora){
 
         this.montoPorHora=montoPorHora;
-        this.tarjetaHoras=tarjetaHoras;
+        this.listaTarjetasHora=listaTarjetasHora;
     }
     calcularSalario(){
        return this.montoPorHora*this.calcularHorasTotales();
@@ -10,8 +10,8 @@ class CalculadoraPorHora {
     calcularHorasTotales(){
 
         let cantidadDeHoras = 0;
-        for (let i = 0; i <this.tarjetaHoras.length ; i++) {
-            cantidadDeHoras = cantidadDeHoras + this.tarjetaHoras[i].obtenerCantidadDeHorasTrabajadas();
+        for (let i = 0; i <this.listaTarjetasHora.length ; i++) {
+            cantidadDeHoras = cantidadDeHoras + this.listaTarjetasHora[i].obtenerCantidadDeHorasTrabajadas();
         }
         return cantidadDeHoras;
     }

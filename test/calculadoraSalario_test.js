@@ -4,13 +4,15 @@ import CalculadoraPorFijo from '../calculadoraSalario/calculadoraPorFijo';
 import CalculadoraPorHora from '../calculadoraSalario/calculadoraPorHora';
 import CalculadoraPorComision from '../calculadoraSalario/calculadoraPorComision';
 import TarjetaHora from '../tarjetas/tarjetaHora';
+import TarjetaAsistencia from '../tarjetas/tarjetaAsistencia';
 import TarjetaVenta from '../tarjetas/tarjetaVenta';
 
 describe('Calculadora de salario', function () {
 
-    it('calcular salario para un empleado fijo', function () {
-        let calculadora = new CalculadoraPorFijo(1800);
-        expect(calculadora.calcularSalario()).equal(1800);
+    it('calcular salario para un empleado fijo que asistio un dia laboral del mes', function () {
+        let tarjetaAsistencia = new TarjetaAsistencia("2018-03-22");
+        let calculadora = new CalculadoraPorFijo(1800,[tarjetaAsistencia]);
+        expect(calculadora.calcularSalario()).equal(81);
     });
 
     it('calcular el salario para un empleado por hora con 1 tarjeta de hora', function () {

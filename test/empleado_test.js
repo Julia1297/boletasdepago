@@ -6,6 +6,7 @@ import CalculadoraPorHora from '../calculadoraSalario/calculadoraPorHora';
 import CalculadoraPorComision from '../calculadoraSalario/calculadoraPorComision';
 import TarjetaHora from '../tarjetas/tarjetaHora';
 import TarjetaVenta from '../tarjetas/tarjetaVenta';
+import TarjetaAsistencia from '../tarjetas/tarjetaAsistencia';
 import CalculadoraDeFechaDePagoPorHora from '../calculadoraFechaDePago/calculadoraDeFechaDePagoPorHora';
 import CalculadoraDeFechaDePagoFijo from '../calculadoraFechaDePago/calculadoraDeFechaDePagoFijo';
 import CalculadoraDeFechaDePagoPorComision from '../calculadoraFechaDePago/CalculadoraDeFechaDePagoPorComision';
@@ -13,9 +14,10 @@ import CalculadoraDeFechaDePagoPorComision from '../calculadoraFechaDePago/Calcu
 describe('calcular el salario para empleados y su fecha de paga', function () {
     
     it('obtener salario para un empleado fijo que gana 1800', function () {
-        let calculadora = new CalculadoraPorFijo(1800);
+        let tarjetaAsistencia = new TarjetaAsistencia("2018-03-22");
+        let calculadora = new CalculadoraPorFijo(1800,[tarjetaAsistencia]);;
         let empleado = new Empleado("Erick", 1, calculadora);
-        expect(empleado.obtenerSalario()).equal(1800);
+        expect(empleado.obtenerSalario()).equal(81);
     });
 
     it('obtener la fecha de paga para un empleado fijo', function () {
