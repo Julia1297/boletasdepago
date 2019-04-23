@@ -1,24 +1,50 @@
 var nodemailer = require('nodemailer');
 
-var transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: 'juantopex123@gmail.com',
-      pass: 'chabone92'
-    }
-  });
+class Email {
+
+  constructor(opcionesDeEnvio) {
+    this.conexion;
+    this.opcionesDeEnvio=opcionesDeEnvio;
+  }
+
+  iniciarConexion() {
+    this.conexion = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: 'juantopex123@gmail.com',
+        pass: 'chabone92'
+      }
+    });
+  }
+
+  enviarNotificacion() {
+    let conexionTemp = this.conexion;
+    let opcionesDeEnvioTemp = this.opcionesDeEnvio
+
+    let promesa = new Promise(
+      function (resolve, reject) {
+        conexionTemp.sendMail(opcionesDeEnvioTemp, function (error, info) {
+          if (error) {
+            resolve("No se envio, Error");
+          } else {
+            resolve("mensaje enviado");
+          }
+        });
+      }
+    );
+    return promesa;
+  }
+
+  enviarNotificacionFacebook(){
+    //Falta implementar para Facebook 
+    return "mensaje enviado";
+  }
   
-  var mailOptions = {
-    from: 'juantopex123@gmail.com',
-    to: 'juantopex123@gmail.com',
-    subject: 'Prueba de Correo',
-    text: 'YA ENVIAA ;D!'
-  };
-  
-  transporter.sendMail(mailOptions, function(error, info){
-    if (error) {
-      console.log(error);
-    } else {
-      console.log('Email sent: ' + info.response);
-    }
-  });
+  enviarNotificacionWhatsapp(){
+    //Falta implementar para  Whatsapp
+    return "mensaje enviado";
+  }
+
+}
+module.exports = Email;
+
