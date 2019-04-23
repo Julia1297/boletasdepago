@@ -4,7 +4,7 @@ import Email from '../email';
 describe('notificaciones', function () {
 
     it('Notificacion para Gmail', async function () {
-        this.timeout(10000);
+        this.timeout(50000);
         let opcionesDeEnvio = {
             from: 'juantopex123@gmail.com',
             to: 'edwinatahuichi92@gmail.com',
@@ -17,19 +17,6 @@ describe('notificaciones', function () {
         expect(respuesta).equal("mensaje enviado");
     });
 
-    it('Notificacion para hotmail', async function () {
-        this.timeout(10000);
-        let opcionesDeEnvio = {
-            from: 'juantopex123@gmail.com',
-            to: 'edwinatahuichi92@hotmail.com',
-            subject: 'Boleta de Pago 2',
-            text: 'La descripccion de la boleta de pago sera enviando en este campo'
-          };
-        let correoHotmail = new Email(opcionesDeEnvio);
-        correoHotmail.iniciarConexion();
-        let respuesta= await correoHotmail.enviarNotificacion()
-        expect(respuesta).equal("mensaje enviado");
-    });
 
     it('Notificacion para Facebook',  function () {
         let opcionesDeEnvio = {
