@@ -39,7 +39,7 @@ describe('Generador de boletas de pago',function(){
         let boletaEsperada=`BOLETA DE PAGO
                             Ci: 1
                             Empleado: Erick
-                            Salario: 81
+                            Salario: 78
                             Tipo de moneda: Bs
                             Metodo de pago: Deposito
                             Fecha de pago: ${fechaDePago1}`;
