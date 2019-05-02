@@ -19,7 +19,7 @@ describe('calcular el salario para empleados y su fecha de paga', function () {
         let fechaIncioLaboral = new Date(2019, 3, 22);
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoFijo(fechaIncioLaboral);
         let empleado = new Empleado("Erick", 1, calculadora,calculadoraDeFecha,"Deposito");
-        expect(empleado.obtenerSalario()).equal(81);
+        expect(empleado.obtenerSalario()).equal(78);
     });
 
     it('obtener la fecha de paga para un empleado fijo', function () {
