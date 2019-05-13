@@ -3,7 +3,7 @@ import Email from '../email';
 
 describe('notificaciones', function () {
 
-    it('Notificacion para Gmail', async function () {
+    /*it('Notificacion para Gmail', async function () {
         this.timeout(50000);
         let opcionesDeEnvio = {
             from: 'juantopex123@gmail.com',
@@ -15,7 +15,7 @@ describe('notificaciones', function () {
         correoGmail.iniciarConexion();
         let respuesta= await correoGmail.enviarNotificacion()
         expect(respuesta).equal("mensaje enviado");
-    });
+    });*/
 
 
     it('Notificacion para Facebook',  function () {

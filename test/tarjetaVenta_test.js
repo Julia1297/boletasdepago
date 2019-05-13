@@ -1,5 +1,5 @@
 var expect = require('chai').expect
-import TarjetaVenta from '../tarjetas/tarjetaVenta';
+import TarjetaVenta from '../tarjetas/TarjetaVenta';
 
 describe('',function(){
     it('calcular monto vendido de una Tarjeta de venta', function () {

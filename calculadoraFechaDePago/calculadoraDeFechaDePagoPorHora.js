@@ -5,7 +5,6 @@ class CalculadoraDeFechaDePagoPorHora{
     }
     calcularFechaDePago(){
         let fechaDePago=this.fechaDeInicioLaboral;
-
         while(fechaDePago.getDay()!= 5){
 
             fechaDePago.setDate(fechaDePago.getDate()+1);

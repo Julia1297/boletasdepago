@@ -1,12 +1,12 @@
 var expect = require('chai').expect;
 
 import Empleado from '../empleado/empleado.js';
-import CalculadoraPorFijo from '../calculadoraSalario/calculadoraPorFijo';
-import CalculadoraPorHora from '../calculadoraSalario/calculadoraPorHora';
-import CalculadoraPorComision from '../calculadoraSalario/calculadoraPorComision';
-import TarjetaHora from '../tarjetas/tarjetaHora';
-import TarjetaVenta from '../tarjetas/tarjetaVenta';
-import TarjetaAsistencia from '../tarjetas/tarjetaAsistencia';
+import CalculadoraPorFijo from '../calculadoraSalario/CalculadoraPorFijo';
+import CalculadoraPorHora from '../calculadoraSalario/CalculadoraPorHora';
+import CalculadoraPorComision from '../calculadoraSalario/CalculadoraPorComision';
+import AsistenciaPorDia from '../tarjetas/AsistenciaPorDia';
+import TarjetaVenta from '../tarjetas/TarjetaVenta';
+import TarjetaAsistencia from '../tarjetas/TarjetaAsistencia';
 import CalculadoraDeFechaDePagoPorHora from '../calculadoraFechaDePago/calculadoraDeFechaDePagoPorHora';
 import CalculadoraDeFechaDePagoFijo from '../calculadoraFechaDePago/calculadoraDeFechaDePagoFijo';
 import CalculadoraDeFechaDePagoPorComision from '../calculadoraFechaDePago/CalculadoraDeFechaDePagoPorComision';
@@ -23,7 +23,7 @@ describe('calcular el salario para empleados y su fecha de paga', function () {
     });
 
     it('obtener la fecha de paga para un empleado fijo', function () {
-        let tarjetaHora = new TarjetaHora("2019-05-22", "16:00:00", "20:00:00");
+        let tarjetaHora = new AsistenciaPorDia("2019-05-22", "16:00:00", "20:00:00");
         let calculadora = new CalculadoraPorHora(200, [tarjetaHora]);
         let fechaIncioLaboral = new Date(2019, 5, 22);
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoFijo(fechaIncioLaboral);
@@ -35,8 +35,10 @@ describe('calcular el salario para empleados y su fecha de paga', function () {
     });
 
     it('obtener el salario para un empleado por hora con 1 tarjeta de venta y 200 de salario por hora', function () {
-        let tarjetaHora = new TarjetaHora("2019-03-22", "16:00:00", "20:00:00");
-        let calculadora = new CalculadoraPorHora(200, [tarjetaHora]);
+        let asistencia1= new AsistenciaPorDia("2019-03-22", "16:00:00", "20:00:00");
+        let tarjetaAsistencia = new TarjetaAsistencia();
+        tarjetaAsistencia.agregarAsistencia(asistencia1);
+        let calculadora = new CalculadoraPorHora(200, tarjetaAsistencia);
         let fechaIncioLaboral = new Date(2019, 3, 22);
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoPorHora(fechaIncioLaboral);
         let empleado = new Empleado("Erick", 1, calculadora,calculadoraDeFecha,"Efectivo");
@@ -44,8 +46,10 @@ describe('calcular el salario para empleados y su fecha de paga', function () {
     });
 
     it('obtener la fecha de paga para un empleado por hora', function () {
-        let tarjetaHora = new TarjetaHora("2019-05-03", "16:00:00", "20:00:00");
-        let calculadora = new CalculadoraPorHora(200, [tarjetaHora]);
+        let asistencia1 = new AsistenciaPorDia("2019-05-03", "16:00:00", "20:00:00");
+        let tarjetaAsistencia = new TarjetaAsistencia();
+        tarjetaAsistencia.agregarAsistencia(asistencia1);
+        let calculadora = new CalculadoraPorHora(200, tarjetaAsistencia);
         let fechaIncioLaboral = new Date(2019, 5, 3);
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoPorHora(fechaIncioLaboral);
         let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha,"Deposito");
@@ -56,16 +60,17 @@ describe('calcular el salario para empleados y su fecha de paga', function () {
     
     
     it('obtener el salario para un empleado por hora con mas de 1 tarjeta de venta y 200 de salario por hora', function () {
-        let tarjetaHoras = new TarjetaHora("2019-03-22", "16:00:00", "20:00:00");
-        let tarjetaHoras1 = new TarjetaHora("2019-03-23", "16:00:00", "20:00:00");
-        let tarjetaHoras2 = new TarjetaHora("2019-03-24", "16:00:00", "20:00:00");
-        
-        let lista = [tarjetaHoras, tarjetaHoras1, tarjetaHoras2];
+        let asistencia1 = new AsistenciaPorDia("2019-03-22", "16:00:00", "20:00:00");
+        let asistencia2 = new AsistenciaPorDia("2019-03-23", "16:00:00", "20:00:00");
+        let asistencia3 = new AsistenciaPorDia("2019-03-24", "16:00:00", "20:00:00");
+        let tarjetaAsistencia = new TarjetaAsistencia();
+        tarjetaAsistencia.agregarAsistencia(asistencia1);
+        tarjetaAsistencia.agregarAsistencia(asistencia2);
+        tarjetaAsistencia.agregarAsistencia(asistencia3);
         let fechaIncioLaboral = new Date(2019, 5, 3);
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoPorHora(fechaIncioLaboral);
-        let calculadora = new CalculadoraPorHora(200, lista);
+        let calculadora = new CalculadoraPorHora(200, tarjetaAsistencia);
         let empleado = new Empleado("Erick", 1, calculadora,calculadoraDeFecha,"Efectivo");
-
         expect(empleado.obtenerSalario()).equal(2400);
     });
 
