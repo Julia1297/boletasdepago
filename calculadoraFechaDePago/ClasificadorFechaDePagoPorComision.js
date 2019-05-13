@@ -1,4 +1,4 @@
-class CalculadoraDeFechaDePagoPorComision {
+class ClasificadorFechaDePagoPorComision {
     constructor(fechaDeInicioLaboral) {
         this.fechaDeInicioLaboral = fechaDeInicioLaboral;
     }
@@ -13,4 +13,4 @@ class CalculadoraDeFechaDePagoPorComision {
     }
 }
 
-module.exports = CalculadoraDeFechaDePagoPorComision;
+module.exports = ClasificadorFechaDePagoPorComision;

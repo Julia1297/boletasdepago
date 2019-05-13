@@ -1,4 +1,4 @@
-class CalculadoraDeFechaDePagoFijo{
+class ClasificadorFechaDePagoFijo{
 
     constructor(fechaDeInicioLaboral){
         this.fechaDeInicioLaboral = fechaDeInicioLaboral;
@@ -28,4 +28,4 @@ class CalculadoraDeFechaDePagoFijo{
         return fechaDePago.getDay()==6;
     }
 }
-module.exports=CalculadoraDeFechaDePagoFijo;
+module.exports=ClasificadorFechaDePagoFijo;

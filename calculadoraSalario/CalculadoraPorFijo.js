@@ -1,6 +1,5 @@
 class CalculadoraPorFijo {
     constructor(salario, listaTarjetasAsistencia){
-
         this.salario=salario;
         this.listaTarjetasAsistencia=listaTarjetasAsistencia;
     }
