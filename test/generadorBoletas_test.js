@@ -4,7 +4,7 @@ import Empleado from '../empleado/Empleado.js';
 import CalculadoraPorFijo from '../calculadoraSalario/CalculadoraPorFijo';
 import CalculadoraPorHora from '../calculadoraSalario/CalculadoraPorHora';
 import CalculadoraPorComision from '../calculadoraSalario/CalculadoraPorComision';
-import TarjetaHoras from '../tarjetas/AsistenciaPorDia';
+import AsistenciaPorDia from '../tarjetas/AsistenciaPorDia';
 import TarjetaVentas from '../tarjetas/TarjetaVenta';
 import TarjetaAsistencia from '../tarjetas/TarjetaAsistencia';
 import CalculadoraDeFechaDePagoPorHora from '../calculadoraFechaDePago/ClasificadorFechaDePagoPorHora';
@@ -29,9 +29,8 @@ describe('Generador de boletas de pago',function(){
     });
 
     function crearListaDeEmpleados() {
-        let tarjetaAsistencia = new TarjetaAsistencia("2019-03-22");
-        let calculadora1 = new CalculadoraPorFijo(1800,[tarjetaAsistencia]);;
         let fechaIncioLaboral1 = new Date(2019, 3, 22);
+        let calculadora1 = new CalculadoraPorFijo(4000,fechaIncioLaboral1);
         let calculadoraDeFecha1 = new CalculadoraDeFechaDePagoFijo(fechaIncioLaboral1);
         let empleado1 = new Empleado("Erick", 1, calculadora1, calculadoraDeFecha1,"Deposito");
         let fechaDePago1 = new Date(2019,3,30);
@@ -39,7 +38,7 @@ describe('Generador de boletas de pago',function(){
         let boletaEsperada=`BOLETA DE PAGO
                             Ci: 1
                             Empleado: Erick
-                            Salario: 78
+                            Salario: 4000
                             Tipo de moneda: Bs
                             Metodo de pago: Deposito
                             Fecha de pago: ${fechaDePago1}`;
@@ -59,8 +58,10 @@ describe('Generador de boletas de pago',function(){
                             Metodo de pago: Efectivo
                             Fecha de pago: ${fechaDePago2}`;
 
-        let tarjetaHoras1 = new TarjetaHoras("2019-03-22", "08:00:00", "12:00:00");
-        let calculadora3 = new CalculadoraPorHora(200, [tarjetaHoras1]);
+        let asistencia1 = new AsistenciaPorDia("2019-03-24",  "08:00:00", "12:00:00");
+        let tarjetaAsistencia = new TarjetaAsistencia();
+        tarjetaAsistencia.agregarAsistencia(asistencia1);
+        let calculadora3 = new CalculadoraPorHora(200,tarjetaAsistencia);
         let fechaIncioLaboral3 = new Date(2019, 3, 22);
         let calculadoraDeFecha3 = new CalculadoraDeFechaDePagoPorHora(fechaIncioLaboral3);
         let empleado3 = new Empleado("Ana", 1, calculadora3, calculadoraDeFecha3,"Efectivo");
@@ -74,8 +75,10 @@ describe('Generador de boletas de pago',function(){
                             Metodo de pago: Efectivo
                             Fecha de pago: ${fechaDePago3}`;
 
-        let tarjetaHoras2 = new TarjetaHoras("2019-03-22", "08:00:00", "12:00:00");
-        let calculadora5 = new CalculadoraPorHora(500, [tarjetaHoras2]);
+        let asistencia2 = new AsistenciaPorDia("2019-03-22", "08:00:00", "12:00:00");
+        let tarjetaAsistencia2 = new TarjetaAsistencia();
+        tarjetaAsistencia.agregarAsistencia(asistencia2);
+        let calculadora5 = new CalculadoraPorHora(500,tarjetaAsistencia2);
         let fechaIncioLaboral5 = new Date(2019, 3, 22);
         let calculadoraDeFecha5 = new CalculadoraDeFechaDePagoPorHora(fechaIncioLaboral5);
         let empleado5 = new Empleado("Maria", 1, calculadora5, calculadoraDeFecha5,"Cheque");

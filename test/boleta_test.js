@@ -15,10 +15,8 @@ import BoletaDePago from '../boleta/boletaDePago';
 
 describe('boleta de pago',function(){
     it('recibe un empleado fijo y genera su boleta de pago', function () {
-        let tarjetaAsistencia = new TarjetaAsistencia("2019-03-02");
-        let calculadora = new CalculadoraPorFijo(1800,[tarjetaAsistencia]);
-
         let fechaIncioLaboral = new Date(2019, 3, 2);
+        let calculadora = new CalculadoraPorFijo(1800,fechaIncioLaboral);
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoFijo(fechaIncioLaboral);
         let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha,"Deposito");
         let boletaPago = new BoletaDePago();
@@ -27,7 +25,7 @@ describe('boleta de pago',function(){
         let boletaEsperada=`BOLETA DE PAGO
                             Ci: 1
                             Empleado: Erick
-                            Salario: 78
+                            Salario: 1800
                             Tipo de moneda: Bs
                             Metodo de pago: Deposito
                             Fecha de pago: ${fechaDePago}`;

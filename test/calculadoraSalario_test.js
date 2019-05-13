@@ -10,31 +10,17 @@ let DiasTrabajados=[];
 describe('Calculadora de salario', function () {
 
     it('calcular salario para un empleado fijo que asistio un dia laboral del mes', function () {
-        let tarjetaAsistencia = new TarjetaAsistencia("2019-03-22");
-        let calculadora = new CalculadoraPorFijo(1800,[tarjetaAsistencia]);
-        expect(calculadora.calcularSalario()).equal(78);
+        let fechaIncioLaboral = new Date(2019, 3, 2);
+        let calculadora = new CalculadoraPorFijo(2000,fechaIncioLaboral);
+        expect(calculadora.calcularSalario()).equal(2000);
     });
 
     it('calcular salario para un empleado fijo que asistio 10 dias laborales del mes', function () {
-        DiezDiasTrabajados();
-        let calculadora = new CalculadoraPorFijo(1800,DiasTrabajados);
-        expect(calculadora.calcularSalario()).equal(782);
+        let fechaIncioLaboral = new Date(2019, 4, 20);
+        let calculadora = new CalculadoraPorFijo(2300,fechaIncioLaboral);
+        expect(calculadora.calcularSalario()).equal(1000);
     });
-    function DiezDiasTrabajados(){
-        let tarjetaAsistencia1 = new TarjetaAsistencia("2019-03-2");
-        let tarjetaAsistencia2 = new TarjetaAsistencia("2019-03-3");
-        let tarjetaAsistencia3 = new TarjetaAsistencia("2019-03-5");
-        let tarjetaAsistencia4 = new TarjetaAsistencia("2019-03-8");
-        let tarjetaAsistencia5 = new TarjetaAsistencia("2019-03-12");
-        let tarjetaAsistencia6 = new TarjetaAsistencia("2019-03-15");
-        let tarjetaAsistencia7 = new TarjetaAsistencia("2019-03-16");
-        let tarjetaAsistencia8 = new TarjetaAsistencia("2019-03-17");
-        let tarjetaAsistencia9 = new TarjetaAsistencia("2019-03-18");
-        let tarjetaAsistencia10 = new TarjetaAsistencia("2019-03-19");
-        DiasTrabajados=[tarjetaAsistencia1,tarjetaAsistencia2,tarjetaAsistencia3,tarjetaAsistencia4,
-                        tarjetaAsistencia5,tarjetaAsistencia6,tarjetaAsistencia7,tarjetaAsistencia8,
-                        tarjetaAsistencia9,tarjetaAsistencia10];
-    }
+
 
     it('calcular el salario para un empleado por hora con 1 tarjeta de hora', function () {
         let asistencia1 = new AsistenciaPorDia("2019-03-22", "08:00:00", "12:00:00");
