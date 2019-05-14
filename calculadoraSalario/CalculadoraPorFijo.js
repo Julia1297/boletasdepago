@@ -15,9 +15,7 @@ class CalculadoraPorFijo {
     obtenerSueldoDiasRestantesDelMes(){
 
         let salarioDia = this.calcularSalarioDia();
-        console.log(salarioDia);
         let diasTrabajados = funcionesFecha.contarDiasHabilesDeUnMesDesde(this.fechaInicioTrabajo.getDate(),this.fechaInicioTrabajo);
-        console.log(diasTrabajados);
         return Math.round(salarioDia * diasTrabajados);
     }
 
@@ -26,13 +24,11 @@ class CalculadoraPorFijo {
     }
 
     empezoATrabajarRecien() {
-        console.log(this.empezoATrabajarEsteMes() , this.empezoATrabajarEsteAnio());
 
         return this.empezoATrabajarEsteMes() && this.empezoATrabajarEsteAnio();
     }
 
     empezoATrabajarEsteMes(){
-        console.log(this.fechaInicioTrabajo.getMonth(), (new Date().getMonth()));
         return this.fechaInicioTrabajo.getMonth() === (new Date().getMonth());
     }
 

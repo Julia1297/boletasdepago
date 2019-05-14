@@ -3,9 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="8b8bde44-d990-4109-8bcd-a7ffa905173f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boleta/boletaDePago.js" beforeDir="false" afterPath="$PROJECT_DIR$/boleta/boletaDePago.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePagoFijo.js" beforeDir="false" afterPath="$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePagoFijo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePagoPorComision.js" beforeDir="false" afterPath="$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePagoPorComision.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePagoPorHora.js" beforeDir="false" afterPath="$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePagoPorHora.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calculadoraSalario/CalculadoraPorFijo.js" beforeDir="false" afterPath="$PROJECT_DIR$/calculadoraSalario/CalculadoraPorFijo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empleado/Empleado.js" beforeDir="false" afterPath="$PROJECT_DIR$/empleado/Empleado.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/boleta_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/boleta_test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/calculadoraSalario_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/calculadoraSalario_test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/calculadoraDeFechaDePago_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/calculadoraDeFechaDePago_test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/empleado_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/empleado_test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/generadorBoletas_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/generadorBoletas_test.js" afterDir="false" />
     </list>
@@ -21,10 +26,22 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/calculadoraSalario/CalculadoraPorComision.js">
+        <entry file="file://$PROJECT_DIR$/empleado/Empleado.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="80">
+              <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/generadorBoletas_test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="79" column="41" lean-forward="true" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
+              <folding>
+                <element signature="e#38#85#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -32,8 +49,65 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/calculadoraSalario/CalculadoraPorFijo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+            <state relative-caret-position="173">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePagoFijo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="58" lean-forward="true" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/empleado_test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="57" column="59" selection-start-line="57" selection-start-column="59" selection-end-line="57" selection-end-column="59" />
+              <folding>
+                <element signature="e#38#85#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/calculadoraSalario/CalculadoraPorHora.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePagoPorHora.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePagoPorComision.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/calculadoraDeFechaDePago_test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -41,83 +115,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/boleta_test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+            <state relative-caret-position="72">
+              <caret line="72" column="50" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
               <folding>
                 <element signature="e#38#85#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/calculadoraSalario_test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="37" column="57" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="37" selection-end-column="57" />
-              <folding>
-                <element signature="e#37#111#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/empleado_test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-              <folding>
-                <element signature="e#38#85#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/generadorBoletas_test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="62" column="57" lean-forward="true" selection-start-line="61" selection-start-column="7" selection-end-line="62" selection-end-column="57" />
-              <folding>
-                <element signature="e#38#85#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generadorBoletas/generadorBoletasPago.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/boleta/boletaDePago.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePago.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/otros/FuncionesFecha.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -133,6 +135,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>Asistencia</find>
       <find>contar</find>
     </findStrings>
   </component>
@@ -142,7 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/boleta/boletaDePago.js" />
         <option value="$PROJECT_DIR$/calculadoraFechaDePago/calculadoraDeFechaDePagoPorHora.js" />
         <option value="$PROJECT_DIR$/test/notificacion_test.js" />
         <option value="$PROJECT_DIR$/test/asistencia_dia_test.js" />
@@ -153,13 +155,18 @@
         <option value="$PROJECT_DIR$/tarjetas/TarjetaAsistencia.js" />
         <option value="$PROJECT_DIR$/test/asistenciaPorDia_test.js" />
         <option value="$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePago.js" />
-        <option value="$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePagoPorHora.js" />
         <option value="$PROJECT_DIR$/otros/FuncionesFecha.js" />
+        <option value="$PROJECT_DIR$/test/calculadoraSalario_test.js" />
+        <option value="$PROJECT_DIR$/empleado/Empleado.js" />
+        <option value="$PROJECT_DIR$/boleta/boletaDePago.js" />
+        <option value="$PROJECT_DIR$/test/generadorBoletas_test.js" />
         <option value="$PROJECT_DIR$/test/boleta_test.js" />
         <option value="$PROJECT_DIR$/calculadoraSalario/CalculadoraPorFijo.js" />
+        <option value="$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePagoFijo.js" />
+        <option value="$PROJECT_DIR$/test/calculadoraDeFechaDePago_test.js" />
+        <option value="$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePagoPorComision.js" />
+        <option value="$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePagoPorHora.js" />
         <option value="$PROJECT_DIR$/test/empleado_test.js" />
-        <option value="$PROJECT_DIR$/test/calculadoraSalario_test.js" />
-        <option value="$PROJECT_DIR$/test/generadorBoletas_test.js" />
       </list>
     </option>
   </component>
@@ -180,6 +187,11 @@
             <path>
               <item name="boletadepago" type="b2602c69:ProjectViewProjectNode" />
               <item name="boletadepago" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boletadepago" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boletadepago" type="462c0819:PsiDirectoryNode" />
+              <item name="boleta" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="boletadepago" type="b2602c69:ProjectViewProjectNode" />
@@ -245,12 +257,32 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9994000" />
+    <option name="totallyTimeSpent" value="16245000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1748512" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.48376068" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23288691" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
@@ -264,27 +296,17 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.43247864" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.62564105" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePagoFijo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePagoPorComision.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/BaseDeDatosMongo.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -306,13 +328,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/calculadoraSalario/CalculadoraPorHora.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -356,20 +371,6 @@
     <entry file="file://$PROJECT_DIR$/calculadoraSalario/Calculadora.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePagoPorHora.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/calculadoraSalario/CalculadoraPorComision.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generadorBoletas/generadorBoletasPago.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="74">
@@ -377,27 +378,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/boleta/boletaDePago.js">
+    <entry file="file://$PROJECT_DIR$/test/calculadoraSalario_test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/boleta_test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
-          <folding>
-            <element signature="e#38#85#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="57">
+          <caret line="5" column="21" selection-start-line="5" selection-end-line="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/otros/FuncionesFecha.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+        <state relative-caret-position="46">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="25" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calculadoraSalario/CalculadoraPorComision.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -408,37 +406,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/calculadoraSalario/CalculadoraPorFijo.js">
+    <entry file="file://$PROJECT_DIR$/boleta/boletaDePago.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        <state relative-caret-position="16">
+          <caret line="7" column="55" lean-forward="true" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/empleado_test.js">
+    <entry file="file://$PROJECT_DIR$/test/boleta_test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+        <state relative-caret-position="72">
+          <caret line="72" column="50" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
           <folding>
             <element signature="e#38#85#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/calculadoraSalario_test.js">
+    <entry file="file://$PROJECT_DIR$/calculadoraSalario/CalculadoraPorFijo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="37" column="57" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="37" selection-end-column="57" />
-          <folding>
-            <element signature="e#37#111#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="173">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/generadorBoletas_test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="62" column="57" lean-forward="true" selection-start-line="61" selection-start-column="7" selection-end-line="62" selection-end-column="57" />
+        <state relative-caret-position="164">
+          <caret line="79" column="41" lean-forward="true" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
+          <folding>
+            <element signature="e#38#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/calculadoraDeFechaDePago_test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePagoPorComision.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/empleado/Empleado.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calculadoraSalario/CalculadoraPorHora.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePagoPorHora.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePagoFijo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="58" lean-forward="true" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/empleado_test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="57" column="59" selection-start-line="57" selection-start-column="59" selection-end-line="57" selection-end-column="59" />
           <folding>
             <element signature="e#38#85#0" expanded="true" />
           </folding>

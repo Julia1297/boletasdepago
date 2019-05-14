@@ -27,8 +27,7 @@ describe('boleta de pago',function(){
                             Empleado: Erick
                             Salario: 1800
                             Tipo de moneda: Bs
-                            Metodo de pago: Deposito
-                            Fecha de pago: ${fechaDePago}`;
+                            Metodo de pago: Deposito`;
         let boletaResultante=boletaPago.generarBoleta(empleado);
         expect(boletaEsperada).equal(boletaResultante);
     });
@@ -51,8 +50,7 @@ describe('boleta de pago',function(){
                             Empleado: Erick
                             Salario: 800
                             Tipo de moneda: Bs
-                            Metodo de pago: Efectivo
-                            Fecha de pago: ${fechaDePago}`;
+                            Metodo de pago: Efectivo`;
         let boletaResultante=boletaPago.generarBoleta(empleado);
         expect(boletaEsperada).equal(boletaResultante);
     });
@@ -72,8 +70,7 @@ describe('boleta de pago',function(){
                             Empleado: Erick
                             Salario: 225
                             Tipo de moneda: Bs
-                            Metodo de pago: Cheque
-                            Fecha de pago: ${fechaDePago}`;
+                            Metodo de pago: Cheque`;
         let boletaResultante=boletaPago.generarBoleta(empleado);
         expect(boletaEsperada).equal(boletaResultante);
     });

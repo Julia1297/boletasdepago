@@ -10,7 +10,6 @@ import TarjetaAsistencia from '../tarjetas/TarjetaAsistencia';
 import CalculadoraDeFechaDePagoPorHora from '../calculadoraFechaDePago/ClasificadorFechaDePagoPorHora';
 import CalculadoraDeFechaDePagoFijo from '../calculadoraFechaDePago/ClasificadorFechaDePagoFijo';
 import CalculadoraDeFechaDePagoPorComision from '../calculadoraFechaDePago/ClasificadorFechaDePagoPorComision';
-import BoletaDePago from '../boleta/boletaDePago';
 import GeneradorBoletasDePago from '../generadorBoletas/generadorBoletasPago';
 let empleados = [];
 let boletasEsperadas = [];
@@ -40,8 +39,7 @@ describe('Generador de boletas de pago',function(){
                             Empleado: Erick
                             Salario: 4000
                             Tipo de moneda: Bs
-                            Metodo de pago: Deposito
-                            Fecha de pago: ${fechaDePago1}`;
+                            Metodo de pago: Deposito`;
 
         let tarjetaVentas = new TarjetaVentas(500, "2019-03-22");
         let calculadora2 = new CalculadoraPorComision(200, 0.05, [tarjetaVentas]);
@@ -55,8 +53,7 @@ describe('Generador de boletas de pago',function(){
                             Empleado: Erick
                             Salario: 225
                             Tipo de moneda: Bs
-                            Metodo de pago: Efectivo
-                            Fecha de pago: ${fechaDePago2}`;
+                            Metodo de pago: Efectivo`;
 
         let asistencia1 = new AsistenciaPorDia("2019-03-24",  "08:00:00", "12:00:00");
         let tarjetaAsistencia = new TarjetaAsistencia();
@@ -72,8 +69,7 @@ describe('Generador de boletas de pago',function(){
                             Empleado: Erick
                             Salario: 800
                             Tipo de moneda: Bs
-                            Metodo de pago: Efectivo
-                            Fecha de pago: ${fechaDePago3}`;
+                            Metodo de pago: Efectivo`;
 
         let asistencia2 = new AsistenciaPorDia("2019-03-22", "08:00:00", "12:00:00");
         let tarjetaAsistencia2 = new TarjetaAsistencia();
@@ -89,8 +85,7 @@ describe('Generador de boletas de pago',function(){
                             Empleado: Erick
                             Salario: 2000
                             Tipo de moneda: Bs
-                            Metodo de pago: Cheque
-                            Fecha de pago: ${fechaDePago5}`;
+                            Metodo de pago: Cheque`;
         empleados = [empleado1];
         boletasEsperadas = [boletaEsperada,boletaEsperad2,boletaEsperad3,boletaEsperad5];
     }

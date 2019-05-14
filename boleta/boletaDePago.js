@@ -7,10 +7,9 @@ class BoletaDePago{
         let boleta =       `BOLETA DE PAGO
                             Ci: ${empleado.obtenerCi()}
                             Empleado: ${empleado.obtenerNombre()}
-                            Salario: ${empleado.obtenerSalario()}
+                            Salario: ${empleado.calcularSalario()}
                             Tipo de moneda: Bs
-                            Metodo de pago: ${empleado.obtenerMetodoPago()}
-                            Fecha de pago: ${empleado.obtenerFechaPago().toString()}`;
+                            Metodo de pago: ${empleado.obtenerMetodoPago()}`;
         return boleta;
     }
 }

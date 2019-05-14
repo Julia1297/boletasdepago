@@ -20,7 +20,7 @@ describe('calcular el salario para empleados y su fecha de paga', function () {
 
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoFijo(fechaIncioLaboral);
         let empleado = new Empleado("Erick", 1, calculadora,calculadoraDeFecha,"Deposito");
-        expect(empleado.obtenerSalario()).equal(1800);
+        expect(empleado.calcularSalario()).equal(1800);
     });
 
     it('obtener la fecha de paga para un empleado fijo', function () {
@@ -29,10 +29,11 @@ describe('calcular el salario para empleados y su fecha de paga', function () {
         let fechaIncioLaboral = new Date(2019, 5, 22);
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoFijo(fechaIncioLaboral);
         let empleado = new Empleado("Erick", 1,calculadora, calculadoraDeFecha,"Cheque");
-        let fechaResultante = empleado.obtenerFechaPago().toString();
-        let fechaEsperada = new Date(2019, 5, 28).toString();
-        
-        expect(fechaEsperada).equal(fechaResultante);
+        let fechaEsperada = new Date(2019, 5, 28)
+
+        let correspondePagar = empleado.correspondePagar(fechaEsperada);
+
+        expect(correspondePagar).equal(true);
     });
 
     it('obtener el salario para un empleado por hora con 1 tarjeta de venta y 200 de salario por hora', function () {
@@ -43,7 +44,7 @@ describe('calcular el salario para empleados y su fecha de paga', function () {
         let fechaIncioLaboral = new Date(2019, 3, 22);
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoPorHora(fechaIncioLaboral);
         let empleado = new Empleado("Erick", 1, calculadora,calculadoraDeFecha,"Efectivo");
-        expect(empleado.obtenerSalario()).equal(800);
+        expect(empleado.calcularSalario()).equal(800);
     });
 
     it('obtener la fecha de paga para un empleado por hora', function () {
@@ -54,9 +55,8 @@ describe('calcular el salario para empleados y su fecha de paga', function () {
         let fechaIncioLaboral = new Date(2019, 5, 3);
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoPorHora(fechaIncioLaboral);
         let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha,"Deposito");
-        let fechaResultante = empleado.obtenerFechaPago().toString();
-        let fechaEsperada = new Date(2019, 5, 7).toString();
-        expect(fechaEsperada).equal(fechaResultante);
+        let correspondePagar = empleado.correspondePagar(new Date(2019, 5, 7));
+        expect(correspondePagar).equal(true);
     });
     
     
@@ -72,7 +72,7 @@ describe('calcular el salario para empleados y su fecha de paga', function () {
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoPorHora(fechaIncioLaboral);
         let calculadora = new CalculadoraPorHora(200, tarjetaAsistencia);
         let empleado = new Empleado("Erick", 1, calculadora,calculadoraDeFecha,"Efectivo");
-        expect(empleado.obtenerSalario()).equal(2400);
+        expect(empleado.calcularSalario()).equal(2400);
     });
 
     it('obtener salario para un empleado por comision con 1 tarjeta de venta y 5% de comision', function () {
@@ -81,7 +81,7 @@ describe('calcular el salario para empleados y su fecha de paga', function () {
         let fechaIncioLaboral = new Date(2019, 5, 3);
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoPorComision(fechaIncioLaboral);
         let empleado = new Empleado("Erick", 1, calculadora,calculadoraDeFecha,"Cheque");
-        expect(empleado.obtenerSalario()).equal(225);
+        expect(empleado.calcularSalario()).equal(225);
     });
 
     it('obtener salario para un empleado por comision con 3 tarjetas de venta y 7% de comision', function () {
@@ -96,17 +96,16 @@ describe('calcular el salario para empleados y su fecha de paga', function () {
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoPorComision(fechaIncioLaboral);
         let empleado = new Empleado("Erick", 1, calculadora,calculadoraDeFecha,"Deposito");
 
-        expect(empleado.obtenerSalario()).equal(763);
+        expect(empleado.calcularSalario()).equal(763);
     });
 
     it('obtener la fecha de paga para un empleado por comision', function () {
         let tarjetaVenta1 = new TarjetaVenta(500, "2019-05-03");
         let calculadora = new CalculadoraPorComision(1000, 0.10, [tarjetaVenta1]);
-        let fechaIncioLaboral = new Date(2019, 5, 3);
-        let calculadoraDeFecha = new CalculadoraDeFechaDePagoPorComision(fechaIncioLaboral);
+        let calculadoraDeFecha = new CalculadoraDeFechaDePagoPorComision();
         let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha,"Efectivo");
-        let fechaResultante = empleado.obtenerFechaPago().toString();
-        let fechaEsperada = new Date(2019, 5, 14).toString();
-        expect(fechaEsperada).equal(fechaResultante);
+        let fechaEsperada = new Date("April 5 2019");
+        let correspondePagar = empleado.correspondePagar(fechaEsperada);
+        expect(correspondePagar).equal(true);
     });
 });

@@ -6,11 +6,11 @@ class Empleado{
         this.calculadoraFechaPago=calculadoraFechaPago;
         this.metodoPago=metodoPago;
     }
-    obtenerSalario(){
+    calcularSalario(){
         return this.calculadora.calcularSalario();
     }
-    obtenerFechaPago(){
-        return this.calculadoraFechaPago.calcularFechaDePago();
+    correspondePagar(fecha){
+        return this.calculadoraFechaPago.correspondePagar(fecha);
     }
     obtenerNombre(){
         return this.nombre;
