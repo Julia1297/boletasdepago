@@ -1,43 +1,45 @@
-var expect = require('chai').expect
-import Email from '../email';
+import CalculadoraPorHora from "../calculadoraSalario/CalculadoraPorHora";
+
+var expect = require('chai').expect;
+import Email from '../notificaciones/Email';
+import Facebook from '../notificaciones/Facebook';
+import Whatsapp from '../notificaciones/Whatsapp';
+import Empleado from '../empleado/Empleado';
+import CalculadoraDeFechaDePagoPorHora from "../calculadoraFechaDePago/ClasificadorFechaDePagoPorHora";
+import AsistenciaPorDia from "../tarjetas/AsistenciaPorDia";
+import TarjetaAsistencia from "../tarjetas/TarjetaAsistencia";
 
 describe('notificaciones', function () {
 
-    /*it('Notificacion para Gmail', async function () {
-        this.timeout(50000);
-        let opcionesDeEnvio = {
-            from: 'juantopex123@gmail.com',
-            to: 'edwinatahuichi92@gmail.com',
-            subject: 'Boleta de Pago 1',
-            text: 'La descripccion de la boleta de pago sera enviando en este campo'
-          };
-        let correoGmail = new Email(opcionesDeEnvio);
-        correoGmail.iniciarConexion();
-        let respuesta= await correoGmail.enviarNotificacion()
-        expect(respuesta).equal("mensaje enviado");
-    });*/
-
-
-    it('Notificacion para Facebook',  function () {
-        let opcionesDeEnvio = {
-            from: 'juantopex123@gmail.com',
-            to: 'https://www.facebook.com/edwin.atahuichi',
-            subject: 'Boleta de Pago 3',
-            text: 'La descripccion de la boleta de pago sera enviando en este campo'
-          };
-        let correoFacebook = new Email(opcionesDeEnvio);
-        expect(correoFacebook.enviarNotificacionFacebook()).equal("mensaje enviado");
+    it('deberia devolver vacio cuando un empleado no agrego ningun medio de notificacion',  function () {
+        let empleado = new Empleado();
+        expect(empleado.notificar()).equal("");
     });
 
-    it('Notificacion para WhatsApp',  function () {
-        let opcionesDeEnvio = {
-            from: 'juantopex123@gmail.com',
-            to: '74320193',
-            subject: 'Boleta de Pago 4',
-            text: 'La descripccion de la boleta de pago sera enviando en este campo'
-          };
-        let whatsapp = new Email(opcionesDeEnvio);
-        expect(whatsapp.enviarNotificacionWhatsapp()).equal("mensaje enviado");
+    it('deberia de notificar por facebook a un empleado que  agrego facebook como medio de notificacion',  function () {
+        let asistencia1 = new AsistenciaPorDia("2019-05-03", "16:00:00", "20:00:00");
+        let tarjetaAsistencia = new TarjetaAsistencia();
+        tarjetaAsistencia.agregarAsistencia(asistencia1);
+        let calculadora = new CalculadoraPorHora(200, tarjetaAsistencia);
+        let fechaIncioLaboral = new Date(2019, 5, 3);
+        let calculadoraDeFecha = new CalculadoraDeFechaDePagoPorHora(fechaIncioLaboral);
+        let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha,"Deposito");
+        empleado = new Facebook(empleado);
+        expect(empleado.notificar()).equal(" Facebook ");
     });
 
+    it('deberia de notificar por facebook whatsapp y email a un empleado que  agrego estos 3 medios como medios de notificacion',  function () {
+        let asistencia1 = new AsistenciaPorDia("2019-05-03", "16:00:00", "20:00:00");
+        let tarjetaAsistencia = new TarjetaAsistencia();
+        tarjetaAsistencia.agregarAsistencia(asistencia1);
+        let calculadora = new CalculadoraPorHora(200, tarjetaAsistencia);
+        let fechaIncioLaboral = new Date(2019, 5, 3);
+        let calculadoraDeFecha = new CalculadoraDeFechaDePagoPorHora(fechaIncioLaboral);
+        let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha,"Deposito");
+        empleado = new Facebook(empleado);
+        empleado = new Whatsapp(empleado);
+        empleado = new Email(empleado);
+
+        expect(empleado.notificar()).equal(" Facebook  Whatsapp  Email ");
+    });
 });

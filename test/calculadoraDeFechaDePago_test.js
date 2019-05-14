@@ -7,7 +7,7 @@ describe('CalculadoraFechaDePago', function () {
 it('recibe una fecha y devuelve la fecha del viernes para pagar a un empleado por hora', function () {
 
     let fechaIncioLaboral = new Date(2019, 3, 8);
-    let calculadoraDeFecha = new CalculadoraDeFechaDePagoPorHora(fechaIncioLaboral);
+    let calculadoraDeFecha = new CalculadoraDeFechaDePagoPorHora();
     let fechaEsperada = new Date(2019, 3, 12);
     let correspondePagar = calculadoraDeFecha.correspondePagar(fechaEsperada);
 

@@ -21,6 +21,9 @@ class Empleado{
     obtenerMetodoPago(){
         return this.metodoPago;
     }
+    notificar(){
+        return "";
+    }
 }
 
 
