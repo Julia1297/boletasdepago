@@ -19,7 +19,7 @@ class Empleado{
         return this.ci;
     }
     obtenerMetodoPago(){
-        return this.metodoPago;
+        return this.metodoPago.obtenerFormaDePagar();
     }
     notificar(){
         return "";

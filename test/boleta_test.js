@@ -10,6 +10,7 @@ import TarjetaAsistencia from '../tarjetas/TarjetaAsistencia';
 import CalculadoraDeFechaDePagoPorHora from '../calculadoraFechaDePago/ClasificadorFechaDePagoPorHora';
 import CalculadoraDeFechaDePagoFijo from '../calculadoraFechaDePago/ClasificadorFechaDePagoFijo';
 import CalculadoraDeFechaDePagoPorComision from '../calculadoraFechaDePago/ClasificadorFechaDePagoPorComision';
+import MetodoDePago from '../metodoDePago/MetodoDePago';
 import BoletaDePago from '../boleta/boletaDePago';
 
 
@@ -18,7 +19,8 @@ describe('boleta de pago',function(){
         let fechaIncioLaboral = new Date(2019, 3, 2);
         let calculadora = new CalculadoraPorFijo(1800,fechaIncioLaboral);
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoFijo(fechaIncioLaboral);
-        let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha,"Deposito");
+        let metodoDePago = new MetodoDePago("Deposito");
+        let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha,metodoDePago);
         let boletaPago = new BoletaDePago();
         let fechaDePago = new Date(2019,3,30);
         fechaDePago.toString();
@@ -41,7 +43,8 @@ describe('boleta de pago',function(){
         expect(calculadora.calcularSalario()).equal(800);
         let fechaIncioLaboral = new Date(2019, 3, 2);
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoPorHora(fechaIncioLaboral);
-        let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha,"Efectivo");
+        let metodoDePago = new MetodoDePago("Efectivo");
+        let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha,metodoDePago);
         let boletaPago = new BoletaDePago();
         let fechaDePago = new Date(2019,3,5);
         fechaDePago.toString();
@@ -61,7 +64,8 @@ describe('boleta de pago',function(){
 
         let fechaIncioLaboral = new Date(2019, 3, 2);
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoPorComision(fechaIncioLaboral);
-        let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha,"Cheque");
+        let metodoDePago = new MetodoDePago("Cheque");
+        let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha,metodoDePago);
         let boletaPago = new BoletaDePago();
         let fechaDePago = new Date(2019,3,12);
         fechaDePago.toString();
