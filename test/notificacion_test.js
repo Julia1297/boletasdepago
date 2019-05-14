@@ -8,6 +8,7 @@ import Empleado from '../empleado/Empleado';
 import CalculadoraDeFechaDePagoPorHora from "../calculadoraFechaDePago/ClasificadorFechaDePagoPorHora";
 import AsistenciaPorDia from "../tarjetas/AsistenciaPorDia";
 import TarjetaAsistencia from "../tarjetas/TarjetaAsistencia";
+import MetodoDePago from '../metodoDePago/MetodoDePago';
 
 describe('notificaciones', function () {
 
@@ -23,7 +24,8 @@ describe('notificaciones', function () {
         let calculadora = new CalculadoraPorHora(200, tarjetaAsistencia);
         let fechaIncioLaboral = new Date(2019, 5, 3);
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoPorHora(fechaIncioLaboral);
-        let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha,"Deposito");
+        let metodoDePago = new MetodoDePago("Deposito");
+        let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha,metodoDePago);
         empleado = new Facebook(empleado);
         expect(empleado.notificar()).equal(" Facebook ");
     });
@@ -35,7 +37,8 @@ describe('notificaciones', function () {
         let calculadora = new CalculadoraPorHora(200, tarjetaAsistencia);
         let fechaIncioLaboral = new Date(2019, 5, 3);
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoPorHora(fechaIncioLaboral);
-        let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha,"Deposito");
+        let metodoDePago = new MetodoDePago("Deposito");
+        let empleado = new Empleado("Erick", 1, calculadora, calculadoraDeFecha,metodoDePago);
         empleado = new Facebook(empleado);
         empleado = new Whatsapp(empleado);
         empleado = new Email(empleado);
