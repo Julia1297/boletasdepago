@@ -31,7 +31,6 @@ it('recibe una fecha y devuelve la fecha del 2do viernes para pagar a un emplead
     let comprabanteDeFechaHora = new CalculadoraDeFechaDePagoPorComision();
     let correspondePagar = comprabanteDeFechaHora.correspondePagar(new Date("April 5 2019"));
 
-
     expect(correspondePagar).equal(true);
 
 });
