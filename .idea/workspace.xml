@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8b8bde44-d990-4109-8bcd-a7ffa905173f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/email.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/empleado/Empleado.js" beforeDir="false" afterPath="$PROJECT_DIR$/empleado/Empleado.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/calculadoraDeFechaDePago_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/calculadoraDeFechaDePago_test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/notificacion_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/notificacion_test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/CRUDRepositorioEmpleadoMongo.js" beforeDir="false" afterPath="$PROJECT_DIR$/db/PersistenciaEmpleadoMongoDB.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/RepositorioEmpleadoMongo.js" beforeDir="false" afterPath="$PROJECT_DIR$/db/ConexionMongoDB.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorBoletas/generadorBoletasPago.js" beforeDir="false" afterPath="$PROJECT_DIR$/generadorBoletas/generadorBoletasPago.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/baseDeDatos_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/baseDeDatos_test.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,60 +18,60 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/calculadoraDeFechaDePago_test.js">
+        <entry file="file://$PROJECT_DIR$/db/PersistenciaEmpleadoMongoDB.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+            <state relative-caret-position="319">
+              <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/calculadoraSalario/CalculadoraPorHora.js">
+        <entry file="file://$PROJECT_DIR$/db/ConexionMongoDB.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/InterfazRepositorioEmpleado.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/baseDeDatos_test.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="23">
-              <caret line="1" column="48" lean-forward="true" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notificaciones/Whatsapp.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/empleado/Empleado.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/empleado_test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="50" column="7" selection-start-line="50" selection-start-column="7" selection-end-line="52" selection-end-column="57" />
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
               <folding>
-                <element signature="e#38#85#0" expanded="true" />
+                <element signature="e#37#113#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/notificacion_test.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/boleta/boletaDePago.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="48" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="48" />
+            <state relative-caret-position="23">
+              <caret line="7" column="55" lean-forward="true" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/generadorBoletas/generadorBoletasPago.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -80,7 +80,7 @@
         <entry file="file://$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePagoFijo.js">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="58" lean-forward="true" selection-end-line="1" />
+              <caret column="58" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -88,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/notificaciones/Facebook.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+            <state relative-caret-position="207">
+              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -97,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/notificaciones/Email.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+            <state relative-caret-position="253">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -155,12 +155,18 @@
         <option value="$PROJECT_DIR$/notificaciones/Mail.js" />
         <option value="$PROJECT_DIR$/notificaciones/NotificadorDecorator.js" />
         <option value="$PROJECT_DIR$/test/calculadoraDeFechaDePago_test.js" />
+        <option value="$PROJECT_DIR$/notificaciones/Notificador.js" />
+        <option value="$PROJECT_DIR$/empleado/Empleado.js" />
         <option value="$PROJECT_DIR$/notificaciones/Facebook.js" />
         <option value="$PROJECT_DIR$/notificaciones/Email.js" />
-        <option value="$PROJECT_DIR$/notificaciones/Notificador.js" />
         <option value="$PROJECT_DIR$/notificaciones/Whatsapp.js" />
-        <option value="$PROJECT_DIR$/empleado/Empleado.js" />
         <option value="$PROJECT_DIR$/test/notificacion_test.js" />
+        <option value="$PROJECT_DIR$/db/ConexionMongoDB.js" />
+        <option value="$PROJECT_DIR$/db/PersistenciaEmpleadoMongoDB.js" />
+        <option value="$PROJECT_DIR$/db/RepositorioEmpleado.js" />
+        <option value="$PROJECT_DIR$/db/InterfazRepositorioEmpleado.js" />
+        <option value="$PROJECT_DIR$/test/baseDeDatos_test.js" />
+        <option value="$PROJECT_DIR$/generadorBoletas/generadorBoletasPago.js" />
       </list>
     </option>
   </component>
@@ -191,22 +197,17 @@
             <path>
               <item name="boletadepago" type="b2602c69:ProjectViewProjectNode" />
               <item name="boletadepago" type="462c0819:PsiDirectoryNode" />
-              <item name="calculadoraFechaDePago" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boletadepago" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boletadepago" type="462c0819:PsiDirectoryNode" />
               <item name="calculadoraSalario" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="boletadepago" type="b2602c69:ProjectViewProjectNode" />
               <item name="boletadepago" type="462c0819:PsiDirectoryNode" />
-              <item name="empleado" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="boletadepago" type="b2602c69:ProjectViewProjectNode" />
               <item name="boletadepago" type="462c0819:PsiDirectoryNode" />
-              <item name="notificaciones" type="462c0819:PsiDirectoryNode" />
+              <item name="generadorBoletas" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="boletadepago" type="b2602c69:ProjectViewProjectNode" />
@@ -253,16 +254,37 @@
       <option name="presentableId" value="Default" />
       <updated>1557763431797</updated>
       <workItem from="1557763435425" duration="4658000" />
+      <workItem from="1558185589792" duration="2609000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20973000" />
+    <option name="totallyTimeSpent" value="24458000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24255952" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3863248" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13318452" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
@@ -277,26 +299,6 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.48376068" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23288691" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" side_tool="true" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.62564105" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -364,13 +366,6 @@
     <entry file="file://$PROJECT_DIR$/calculadoraSalario/Calculadora.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/generadorBoletas/generadorBoletasPago.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/calculadoraSalario_test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -389,13 +384,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/boleta/boletaDePago.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="7" column="55" lean-forward="true" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -436,11 +424,7 @@
     <entry file="file://$PROJECT_DIR$/notificaciones/NotificadorDecorator.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/email.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-529" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/email.js" />
     <entry file="file://$PROJECT_DIR$/otros/FuncionesFecha.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -455,38 +439,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/calculadoraSalario/CalculadoraPorHora.js">
+    <entry file="file://$PROJECT_DIR$/test/calculadoraDeFechaDePago_test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="48" lean-forward="true" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
+        <state relative-caret-position="183">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/calculadoraDeFechaDePago_test.js">
+    <entry file="file://$PROJECT_DIR$/calculadoraSalario/CalculadoraPorHora.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+        <state relative-caret-position="23">
+          <caret line="1" column="48" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notificaciones/Whatsapp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/empleado/Empleado.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/empleado_test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="54" column="7" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+          <folding>
+            <element signature="e#38#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/notificacion_test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="45" column="55" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/calculadoraFechaDePago/ClasificadorFechaDePagoFijo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="58" lean-forward="true" selection-end-line="1" />
+          <caret column="58" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notificaciones/Facebook.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        <state relative-caret-position="207">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notificaciones/Email.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        <state relative-caret-position="253">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -497,34 +512,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notificaciones/Whatsapp.js">
+    <entry file="file://$PROJECT_DIR$/db/ConexionMongoDB.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        <state relative-caret-position="92">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/empleado/Empleado.js">
+    <entry file="file://$PROJECT_DIR$/db/InterfazRepositorioEmpleado.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/empleado_test.js">
+    <entry file="file://$PROJECT_DIR$/db/PersistenciaEmpleadoMongoDB.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="50" column="7" selection-start-line="50" selection-start-column="7" selection-end-line="52" selection-end-column="57" />
+        <state relative-caret-position="319">
+          <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/baseDeDatos_test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
-            <element signature="e#38#85#0" expanded="true" />
+            <element signature="e#37#113#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/notificacion_test.js">
+    <entry file="file://$PROJECT_DIR$/boleta/boletaDePago.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="48" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="48" />
+        <state relative-caret-position="23">
+          <caret line="7" column="55" lean-forward="true" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generadorBoletas/generadorBoletasPago.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
         </state>
       </provider>
     </entry>

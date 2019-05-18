@@ -3,6 +3,7 @@ class GeneradorBoletasDePago{
     constructor(empleados){
         this.empleados=empleados;
         this.boletasGeneradas=[];
+
     }
    
     generarBoletasDePagoParaTodosLosEmpleados(){

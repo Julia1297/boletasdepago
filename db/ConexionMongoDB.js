@@ -1,5 +1,5 @@
 var MongoClient = require('mongodb').MongoClient;
-class RepositorioEmpleadoMongo {
+class ConexionMongoDB {
     constructor() {
       this.url = 'mongodb://localhost/resthub';
       this.mongoose=MongoClient;
@@ -8,4 +8,4 @@ class RepositorioEmpleadoMongo {
         .catch(err => console.log(err));
     }
   }
-  module.exports=RepositorioEmpleadoMongo;
+  module.exports=ConexionMongoDB;

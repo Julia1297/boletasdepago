@@ -1,7 +1,9 @@
-import RepositorioEmpleadoMongo from './RepositorioEmpleadoMongo';
-class CRUDRepositorioEmpleadoMongo {
+//import RepositorioEmpleado from './RepositorioEmpleado';
+import ConexionMongoDB from './ConexionMongoDB';
+
+class PersistenciaEmpleadoMongoDB {
   constructor() {
-    this.empleadoRepository = new RepositorioEmpleadoMongo();
+    this.empleadoRepository = new ConexionMongoDB();
     this.baseDeDatos = this.empleadoRepository.mongoose;
   }
   insertarEmpleado(empleado) {
@@ -61,5 +63,5 @@ class CRUDRepositorioEmpleadoMongo {
     return promesa;
   }
 }
-module.exports=CRUDRepositorioEmpleadoMongo;
+module.exports=PersistenciaEmpleadoMongoDB;
 

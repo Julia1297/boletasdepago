@@ -1,5 +1,6 @@
 var expect = require('chai').expect;
-import CRUDRepositorioEmpleadoMongo from '../db/CRUDRepositorioEmpleadoMongo';
+import PersistenciaEmpleadoMongoDB from '../db/PersistenciaEmpleadoMongoDB';
+import InterfazRepositorioEmpleado from '../db/InterfazRepositorioEmpleado';
 
 import Empleado from '../empleado/Empleado.js';
 import CalculadoraPorHora from '../calculadoraSalario/CalculadoraPorHora';
@@ -15,7 +16,7 @@ describe('Conexion de la base de datos', function () {
         let calculadoraDeFecha = new CalculadoraDeFechaDePagoFijo(fechaIncioLaboral);
         let metodoDePago = new MetodoDePago("Cheque");
         let empleado = new Empleado("Erick", 1,calculadora, calculadoraDeFecha,metodoDePago);
-        let serviciosDeEmpleado = new CRUDRepositorioEmpleadoMongo();
+        let serviciosDeEmpleado = new InterfazRepositorioEmpleado( new PersistenciaEmpleadoMongoDB());
         serviciosDeEmpleado.insertarEmpleado(empleado);
         expect(true).equal(true);
     });
